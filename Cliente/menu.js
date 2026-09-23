@@ -21,6 +21,12 @@ function listarPedidos() {
     pedidos.forEach((pedido, index) => {
         console.log(`${index + 1}. ${pedido.producto} - $${pedido.precio}`);
     });
+
+     let productos = pedidos.map((pedido) => {
+        return pedido.producto;
+    });
+
+    console.log(productos);
 }
 
 console.log("===== MENÚ CLIENTE =====");
