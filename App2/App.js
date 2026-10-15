@@ -16,7 +16,11 @@ export default function App() {
       <Saludo></Saludo>
       <Saludo2></Saludo2>
       
-      <Perfil></Perfil>
+      <Perfil nombre="Paloma Valeria Hurtado" carrera="ITTID" 
+      materia="Desarrollo de Aplicaciones Móvil" cuatrimestre="Cuarto" />
+      <Perfil nombre="Juan Carlos López" carrera="Ingeniería en Sistemas Computacionales"
+      materia="Programación Web" cuatrimestre="Segundo" />
+
       <StatusBar style="auto" />
     </View>
   );

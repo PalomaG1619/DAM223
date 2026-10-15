@@ -1,15 +1,25 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
+import { useState } from 'react';
 
-export const Perfil = () => {
+export const Perfil = ({ nombre, carrera, materia, cuatrimestre }) => {
+  const[mostrar, setMostrar] = useState(false);
+
   return (
     <View style={styles.card}>
-      <Text>Nombre: Paloma Valeria Hurtado</Text>
-      <Text>Carrera: Ingeniería en Tecnologías de la Información e Innovación Digital</Text>
-      <Text>Materia: Desarrollo de Aplicaciones Móvil</Text>
-      <Text>Cuatrimestre: Cuarto</Text>
+      <Text>Nombre: {nombre}</Text>
+
+        { mostrar && 
+         <>
+         <Text>Carrera: {carrera}</Text>
+         <Text>Materia: {materia}</Text>
+         <Text>Cuatrimestre: {cuatrimestre}</Text>
+         </> 
+       }
+      <Button
+        title="Ver perfil" onPress={ () => setMostrar (true) }></Button>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   card: {
@@ -18,5 +28,5 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     margin: 16,
   },
-});
+})
 
