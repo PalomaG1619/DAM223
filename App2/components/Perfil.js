@@ -1,18 +1,18 @@
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet, Button} from 'react-native';
 import { useState } from 'react';
 
-export const Perfil = ({ nombre, carrera, materia, cuatrimestre }) => {
-  const[mostrar, setMostrar] = useState(false);
+export const Perfil = ({ nombre, carrera, materia, cuatrimestre, estilo}) => {
+const[mostrar, setMostrar] = useState(false);
 
-  return (
-    <View style={styles.card}>
-      <Text>Nombre: {nombre}</Text>
-
+   return (
+    <View style={[styles.tarjeta, estilo]}>
+      <Text style={styles.nombres}>Nombre: {nombre}</Text>
+      
         { mostrar && 
          <>
-         <Text>Carrera: {carrera}</Text>
-         <Text>Materia: {materia}</Text>
-         <Text>Cuatrimestre: {cuatrimestre}</Text>
+         <Text style={styles.carrera}>Carrera: {carrera}</Text>
+         <Text style={styles.otroTexto}>Materia: {materia}</Text>
+         <Text style={styles.otroTexto}>Cuatrimestre: {cuatrimestre}</Text>
          </> 
        }
       <Button
@@ -22,11 +22,27 @@ export const Perfil = ({ nombre, carrera, materia, cuatrimestre }) => {
 }
 
 const styles = StyleSheet.create({
-  card: {
-    backgroundColor: '#e7b7b7ff',
-    padding: 20,
-    borderRadius: 12,
-    margin: 16,
+  nombres:{
+    fontSize:24,
+    fontWeight:800,
+    TextTransform: 'uppercase'
+  },
+  carrera:{
+    fontSize:20,
+    fontFamily:'Roboto',
+    color:'red',
+  },
+  otroTexto:{
+    fontSize:18,
+    fontFamily:'Courier',
+    color:'blue',
+    fontStyle:'italic',
+  },
+  tarjeta:{
+    borderWidth:4,
+    borderRadius:12,
+    padding:15,
+    margin:10,
   },
 })
 
