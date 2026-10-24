@@ -5,7 +5,7 @@ import {useState} from 'react';
 import SafeScreen from './SafeScreen';
 import PressableScreen from './PressableScreen';
 import TarjetasScreen from './TarjetasScreen';
-import TextInputScreen from '/TextInputScreen';
+import TextInputScreen from './TextInputScreen';
 import FlatListScreen from './FlatListScreen';
 import ImageBackgroundScreen from './ImageBackgroundScreen';
 import ModalBottomScreen from './ModalBottomScreen';
