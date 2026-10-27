@@ -10,20 +10,17 @@ import {
 } from 'react-native';
 
 export default function ImageBackgroundScreen() {
-  // -------------------------------------------------------------
-  // ESTADOS (State para la práctica)
-  // -------------------------------------------------------------
+  
+  /* ESTADOS */ 
+  
   const [showSplash, setShowSplash] = useState(true);
   const [blurAmount, setBlurAmount] = useState(0);
 
-  // Imágenes
-  // Imagen de fondo profesional / minimalista para la pantalla principal
   const bgMain = { uri: 'https://i.blogs.es/fb2535/hello-orange-2/1366_2000.webp' };
   const logoApp = { uri: 'https://reactnative.dev/img/tiny_logo.png' };
 
-  // -------------------------------------------------------------
-  // LÓGICA DE SPLASHSCREEN (3 Segundos)
-  // -------------------------------------------------------------
+ 
+  /* SPLASHSCREEN (3 Segundos) */
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false);
@@ -32,13 +29,11 @@ export default function ImageBackgroundScreen() {
     return () => clearTimeout(timer);
   }, []);
 
-  // -------------------------------------------------------------
-  // VISTA 1: SPLASHSCREEN (Fondo Negro + Cuadro Transparente)
-  // -------------------------------------------------------------
+
+  /* SPLASHSCREEN (Fondo Negro y Cuadro Transparente) */
   if (showSplash) {
     return (
       <View style={styles.splashBlackBackground}>
-        {/* Cuadro semi-transparente sobre fondo negro */}
         <View style={styles.transparentCard}>
           <Image 
             source={logoApp} 
@@ -51,9 +46,8 @@ export default function ImageBackgroundScreen() {
     );
   }
 
-  // -------------------------------------------------------------
-  // VISTA 2: PANTALLA PRINCIPAL (ImageBackground)
-  // -------------------------------------------------------------
+
+  /* PANTALLA PRINCIPAL (ImageBackground) */
   return (
     <ImageBackground
       source={bgMain}
@@ -73,9 +67,8 @@ export default function ImageBackgroundScreen() {
   );
 }
 
-// -------------------------------------------------------------
-// ZONA DE ESTILOS
-// -------------------------------------------------------------
+
+/* ZONA DE ESTILOS */
 const styles = StyleSheet.create({
   // SplashScreen: Contenedor negro de fondo completo
   splashBlackBackground: {
@@ -86,10 +79,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   
-  // Cuadro transparente con diseño horizontal estilizado
+  // Cuadro transparente
   transparentCard: {
-    backgroundColor: 'rgba(255, 255, 255, 0.12)', // Fondo blanco muy sutil (transparente)
-    borderColor: 'rgba(255, 255, 255, 0.2)',    // Borde fino brillante
+    backgroundColor: 'rgba(255, 255, 255, 0.12)', 
     borderWidth: 1,
     paddingVertical: 35,
     paddingHorizontal: 20,
