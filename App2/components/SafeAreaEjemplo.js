@@ -8,13 +8,13 @@ export default function SafeAreaEjemplo(){
         const [mensaje, setMensaje] = useState('Bienvenido a nuestra práctica')
 
         return (
-            <SafeAreaView style={StyleSheet.container} edges={['top',  'botton']}>
+            <SafeAreaView style={styles.container} edges={['top',  'bottom']}>
                 <Text style={styles.titulo}>Ejemplo de SafeAreaView</Text>
                 <Text style={styles.mensaje}>{mensaje}</Text>
                 <Button 
                 
                 title ="Cambiar mensaje"
-                on onPress={() => setMensaje(mensaje === 'Esta es nuestra práctica'
+                onPress={() => setMensaje(mensaje === 'Esta es nuestra práctica'
                    ? 'hola': 'Esta es nuestra práctica'
                 )}
                 />
@@ -23,12 +23,12 @@ export default function SafeAreaEjemplo(){
 }
 
 /* ZONA DE ESTÉTICA*/
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     container:{
         backgroundColor:'pink',
         padding:20,
-        alightItems:'center',
-        borderRadius:'10',
+        alignItems:'center',
+        borderRadius:10,
     },
     titulo:{
         fontSize:20,

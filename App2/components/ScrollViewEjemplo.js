@@ -33,7 +33,7 @@ export default function ScrollViewEjemplo(){
 const styles =StyleSheet.create({
     container:{
         padding:10,
-        backGroundColor: '#fff',
+        backgroundColor: '#fff',
     },
     titulo:{
         fontSize: 20,

@@ -8,11 +8,16 @@ import ScrollViewEjemplo from '../components/ScrollViewEjemplo';
 /*2. ZONA MAIN (componentes ó Screens)*/
 export default function SafeScreen() {
   return (
-    <SafeAreaView style={styles.container} edges={['top', 'bottom']}
-     <Text style={styles.tituloPrincipal}>Aquí va la practica 10 - Equipo de Dulce</Text>
-        <SafeAreaEjemplo/>
-        <ScrollViewEjemplo/>
-    </SafeAreaView>
+      <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
+
+      <Text style={styles.tituloPrincipal}>
+        Aqui va la practica 10 - equipo de dulce
+      </Text>
+
+      <SafeAreaEjemplo />
+
+      <ScrollViewEjemplo/>
+      </SafeAreaView>
   );
 }
 
@@ -28,7 +33,8 @@ const styles = StyleSheet.create({
   tituloPrincipal:{
     fontSize:24,
     fontWeight:'bold',
-    textAlign:
-  }
+    textAlign:'center',
+    marginBottom: 15,
+  },
 
 });
