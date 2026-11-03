@@ -17,7 +17,7 @@ export default function TextInputScreen() {
 
     const registrar = () => {
         const faltantes = [];
-    
+        
         if (nombre.trim() === '') {
             faltantes.push('Nombre');
         }
@@ -49,7 +49,7 @@ export default function TextInputScreen() {
         setTelefono('');
     };
 
-    
+
     return (
         <View style={styles.contenedor}>
             <Text style={styles.titulo}>Registros de Datos</Text>
@@ -72,7 +72,7 @@ export default function TextInputScreen() {
 
             <TextInput
                 style={styles.input}
-                placeholder="Teléfono"
+                placeholder="Telefono"
                 value={telefono}
                 onChangeText={setTelefono}
                 keyboardType="numeric"

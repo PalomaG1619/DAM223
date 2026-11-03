@@ -72,6 +72,7 @@ export default function ImageBackgroundScreen() {
 const styles = StyleSheet.create({
   // SplashScreen: Contenedor negro de fondo completo
   splashBlackBackground: {
+    width: '100%',
     flex: 1,
     backgroundColor: '#000000',
     justifyContent: 'center',
@@ -109,6 +110,7 @@ const styles = StyleSheet.create({
 
   // Pantalla Principal
   mainContainer: {
+    width: '100%',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

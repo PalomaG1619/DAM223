@@ -15,13 +15,13 @@ export default function PressableScreen() {
         <Text>Equipo de Karen </Text>
 
         <Switch
-          value = {encendido}
-          onValueChanges={(valor) => setEncendido(valor)}
+          value={encendido}
+          onValueChange={(valor) => setEncendido(valor)}
         />
         <Text style={styles.texto}>
           El switch está: {encendido ? 'Encendido' : 'Apagado'}
         </Text>
- 6aAX M,./. 
+
         < Pressable
         style = {styles.boton}
         onPress={() => setContador(contador + 1)}
