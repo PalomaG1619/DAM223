@@ -8,12 +8,12 @@ export default function RegistroEventUnivScreen() {
   const [carrera, setCarrera] = useState('');
   const [semestre, setSemestre] = useState('');
 
-  // Respuestas de los interruptores
-  const [taller, setTaller] = useState(null);
-  const [constancia, setConstancia] = useState(null);
-  const [deportes, setDeportes] = useState(null);
+  // interruptores
+  const [taller, setTaller] = useState(false);
+  const [constancia, setConstancia] = useState(false);
+  const [deportes, setDeportes] = useState(false);
 
-  // Funcion para mostrar alertas
+  // mostrar alertas
   const mostrarAlerta = (titulo, mensaje) => {
 
     if (Platform.OS === 'web') {
@@ -32,9 +32,7 @@ export default function RegistroEventUnivScreen() {
       nombre.trim() === '' ||
       carrera.trim() === '' ||
       semestre.trim() === '' ||
-      taller === null ||
-      constancia === null ||
-      deportes === null
+      (taller === false && constancia === false && deportes === false)
     ) {
 
       mostrarAlerta(
@@ -113,7 +111,6 @@ export default function RegistroEventUnivScreen() {
         onChangeText={setSemestre}
       />
 
-      {/* Pregunta del taller */}
       <View style={styles.pregunta}>
         <Text style={styles.textoPregunta}>
           ¿Asistirá al taller?
@@ -196,7 +193,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#642424ff',
-    marginTop: 65,
+    marginTop: 95,
     marginBottom: 10
   },
 
