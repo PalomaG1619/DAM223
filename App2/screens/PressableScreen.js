@@ -21,7 +21,7 @@ export default function PressableScreen() {
         <Text style={styles.texto}>
           El switch está: {encendido ? 'Encendido' : 'Apagado'}
         </Text>
-
+ 6aAX M,./. 
         < Pressable
         style = {styles.boton}
         onPress={() => setContador(contador + 1)}
